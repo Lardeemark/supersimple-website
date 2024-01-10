@@ -1,0 +1,36 @@
+.side-bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 55px;
+  width: 73px;
+  background-color: white;
+  z-index: 101;
+  padding-top: 5px;
+  
+}
+
+.sidebar-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 76px;
+  margin-bottom: 1px;
+  flex-direction: column;
+}
+
+.sidebar-link:hover{
+  cursor: pointer;
+  background-color: rgb(234, 234, 234);
+}
+
+.sidebar-link img{
+  height: 24px;
+  margin-bottom: 7px;
+  
+}
+
+.sidebar-link div{
+  font-size: 10px;
+}

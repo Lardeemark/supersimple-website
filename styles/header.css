@@ -1,0 +1,255 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  column-gap: 20px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-bottom-color: lightgray;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  z-index: 100;
+}
+
+.left-section{
+  display: flex;
+  align-items: center;
+}
+
+.hamberger-menu{
+  height: 25px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.youtube-logo{
+  height: 20px;
+}
+
+.middle-section{
+  flex:1;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+
+}
+
+.search-bar{
+  padding-left: 10px;
+  height: 36px;
+  flex: 1;
+  font-size: 16px;
+  border: 1px solid rgb(182,182,182);
+  border-radius: 2px;
+  width: 0;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05)
+}
+
+.search-bar::placeholder{
+  font-family: Roboto, Arial;
+  font-size: 16px;
+}
+
+.search-button{
+  height: 39px;
+  width: 66px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: rgb(240, 240, 240);
+  border-color: rgb(192,192,192);
+  margin-left: -2px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.search-button .tool-tip{
+  position: absolute;
+  background-color: grey;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  Opacity: 0;
+  transition: opacity .1s;
+  pointer-events: none;
+}
+
+.search-button:hover .tool-tip{
+  opacity: 1;
+}
+
+.search-icon{
+  height: 25px;
+}
+
+.microphone-button{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-style: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(242,242,242);
+}
+
+.voice-search-icon{
+  height: 24px;
+  flex: 1;
+  background-color: rgb
+}
+
+.microphone-button .tool-tip{
+  position: absolute;
+  background-color: grey;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  Opacity: 0;
+  transition: opacity .1s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.microphone-button:hover .tool-tip{
+  opacity: 1;
+}
+
+.right-section{
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.upload-icon{
+  height: 24px;
+}
+
+.upload-icon-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.upload-icon-container .tool-tip{
+  position: absolute;
+  background-color: grey;
+  color: white;
+  bottom: -30px;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 2px;
+  transition: opacity .15s;
+  opacity: 0;
+  pointer-events: none;
+  
+  
+}
+
+.upload-icon-container:hover .tool-tip{
+  opacity: 1;
+}
+
+.apps-icon{
+  height: 24px;
+}
+
+.apps-icon-container{
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+}
+
+.apps-icon-container .tool-tip{
+  position: absolute;
+  background-color: grey;
+  color: white;
+  font-size: 12px;
+  font-family: Roboto, Arial;
+  padding: 4px;
+  white-space: nowrap;
+  bottom: -30px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity .15s;
+  pointer-events: none;
+}
+
+.apps-icon-container:hover .tool-tip{
+  opacity: 1;
+}
+
+.notification-icon{
+  height: 24px;
+}
+
+.notification-icon-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.notification-count{
+  position: absolute;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  font-family: roboto, Arial;
+  font-size: 10px;
+  top: -3px;
+  right: -4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 11px;
+}
+
+.notification-icon-container .tool-tip{
+  position:absolute;
+  bottom: -40px;
+  font-size: 12px;
+  font-family: roboto, Arial;
+  color: white;
+  background-color: grey;
+  border-radius: 2px;
+  pointer-events: none;
+  padding: 4px;
+  transition: opacity .15s;
+  opacity: 0;
+}
+
+.notification-icon-container:hover{
+  cursor:pointer;
+}
+
+.notification-icon-container:hover .tool-tip{
+  opacity: 1;
+}
+
+.my-profile-icon{
+  height: 26px;
+  border-radius: 50%;
+}
