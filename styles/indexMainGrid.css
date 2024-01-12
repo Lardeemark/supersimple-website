@@ -1,0 +1,83 @@
+
+
+.steak-collection-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.steak-collection-1{
+  width: 100%;
+  height: 300px;
+  background-color: grey;
+  position: relative;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  
+}
+
+.steak-image-1{
+  background-color: black;
+  display: block;
+  width: 100%;
+  height: 60%;
+}
+
+.steak-information{
+  display: grid;
+  height: 40%;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+.steak-information-text{
+  height: 100%;
+  padding-left: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+
+
+.steak-order{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-evenly;
+
+  
+}
+
+
+.input-cartItem{
+
+}
+
+.steak-order-button{
+  padding: 4px 4px;
+}
+
+.steak-order-button:hover{
+  cursor:pointer;
+  color: rgb(128,128,128);
+  background-color: rgb(200,200,200);
+}
+
+.steak-order-button:active{
+  color: white;
+  background-color:black;
+}
+
+
+
+/* Overall Grid */
+
+.steak-collection-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

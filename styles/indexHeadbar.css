@@ -1,0 +1,13 @@
+.head-bar{
+  display:grid;
+  height: 50px;
+  color: white;
+  background-color: darkred;
+  grid-template-columns: 1fr 1fr 1fr;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 100;
+}
+
