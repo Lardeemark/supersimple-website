@@ -11,3 +11,13 @@
   z-index: 100;
 }
 
+
+
+.head-bar-cart{
+  padding-right: 20px;
+  height: 80%;
+}
+
+.head-bar-cart:hover{
+  cursor:pointer;
+}

@@ -8,15 +8,24 @@
   <body style="background-color: white;
   padding-top: 80px;
   padding-left: 20px;
-  height: 3000px;">
+  height: 3000px;
+  font-family: Arial;">
     
     <div class="head-bar">
-        <div style="">First Div</div>
+        <div>First Div</div>
         <div>Search Bar:
           <input type="text" placeholder="Steak Search"> 
           <button>Search</button>
         </div>
-        <div>cart</div>
+        <div class="" style="display:flex;
+        align-items: center;
+        justify-content: right;
+        height: 50px;
+        position:relative;">
+        <a style="height: 100%; padding-top: 10px;" href="checkout.html">
+          <img class="head-bar-cart js-head-bar-cart" 
+          src="Graphics/Icons/shopping-cart-icon-512x462-yrde1eu0.png"></a>
+          </div>
 
     </div>
 
@@ -25,7 +34,7 @@
 
       <div class="steak-collection-1">
         <div class="steak-image-1">
-          <img src="Images/RibeyeSteakPrime.jpg"
+          <img src="Graphics/SteakImages/RibeyeSteakPrime.jpg"
           style="width: 100%;
           height: 100%;
           display: inline-block;
@@ -39,16 +48,18 @@
             <p>Price: $40 per pound</p>
             </div>
           <div class="steak-order">
-            <input type="text" placeholder="Enter quantity by lbs" class="iput-cartItem">
-            <p style="margin: 0;">Subtotal: </p>
-            <button class="steak-order-button">Add to Cart</button>
+            <div><input type="number" placeholder="Enter quantity by lbs" class="input-cartItem input-cartItem-js"
+            min="0" max="100">
+          lbs</div>
+            <p style="margin: 0;" class="subtotal-steak1">Subtotal: </p>
+            <button class="steak-order-button steak-order-button-js">Add to Cart</button>
           </div>
         </div>
       </div>
 
       <div class="steak-collection-1">
         <div class="steak-image-1">
-          <img src="Images/RibeyeSteakChoice.jpg"
+          <img src="Graphics/SteakImages/RibeyeSteakChoice.jpg"
           style="width: 100%;
           height: 100%;
           display: inline-block;
@@ -71,7 +82,7 @@
 
       <div class="steak-collection-1">
         <div class="steak-image-1">
-          <img src="Images/NewYorkStripPrime.jpg"
+          <img src="Graphics/SteakImages/NewYorkStripPrime.jpg"
           style="width: 100%;
           height: 100%;
           display: inline-block;
@@ -94,7 +105,7 @@
 
       <div class="steak-collection-1">
         <div class="steak-image-1">
-          <img src="Images/NewYorkStripChoice.jpg"
+          <img src="Graphics/SteakImages/NewYorkStripChoice.jpg"
           style="width: 100%;
           height: 100%;
           display: inline-block;
@@ -117,7 +128,7 @@
       
       <div class="steak-collection-1">
         <div class="steak-image-1">
-          <img src="Images/Tri-tipPrime.jpg"
+          <img src="Graphics/SteakImages/Tri-tipPrime.jpg"
           style="width: 100%;
           height: 100%;
           display: inline-block;
@@ -140,7 +151,7 @@
 
       <div class="steak-collection-1">
         <div class="steak-image-1">
-          <img src="Images/Tri-tipChoice.jpg"
+          <img src="Graphics/SteakImages/Tri-tipChoice.jpg"
           style="width: 100%;
           height: 100%;
           display: inline-block;
@@ -161,5 +172,7 @@
         </div>
       </div>
 
+        <script type="module" src="scripts/steakHander.js">
+        </script>
   </body>
 </html>
