@@ -11,6 +11,20 @@
   z-index: 100;
 }
 
+.search-bar-div{
+  white-space: nowrap;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  margin: 0px 20px;
+}
+
+.search-button{
+  height: 50%;
+  margin-right: 10px;
+}
+
 .right-div{
   display:flex;
   align-items: center;
