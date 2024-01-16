@@ -29,7 +29,7 @@ function populateSteakCollection(){
           </p>
         </div>
         <div class="steak-order">
-          <div>
+          <div style="display:flex; align-items: center; justify-content:space-between;">
             <input type="number" placeholder="Enter quantity by lbs" class="input-cartItem input-cartItem-${index}-js"
             min="0" max="100" > lbs
           </div>
