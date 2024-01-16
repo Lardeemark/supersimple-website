@@ -5,9 +5,7 @@ export let cart = [];
 
 
 export function initializeCart(initializer){
-  if(localStorage.getItem('cart') === null){
-    localStorage.setItem('cart', JSON.stringify([]));
-  }
+
   const initializeFromStorage = initializer;
 
   if (initializeFromStorage === false){
@@ -19,7 +17,13 @@ export function initializeCart(initializer){
       quantity: 10
     }];
   }else if(initializeFromStorage === true){
+    if(JSON.parse(localStorage.getItem('cart')) === null){
+      localStorage.setItem('cart', JSON.stringify([]));
+      cart = [];
+    }
+    else{
     cart = JSON.parse(localStorage.getItem('cart'));
+    }
 
   }
   else{console.log('please enter a boolean value');
