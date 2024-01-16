@@ -55,5 +55,6 @@ export function getPicture(productName){
   };
 
 export function getCartLength(){
+  console.log(cart);
   return cart.length;
 }
