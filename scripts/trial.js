@@ -18,9 +18,34 @@ function innerAdder(){
 
 adder();
 */
+let numberArray = JSON.parse(localStorage.getItem('cart3'));
+if (numberArray === null){
+  numberArray = [];
+}
 
 const numberInput = document.querySelector('.number-input');
 console.log(numberInput);
 numberInput.addEventListener('keydown', (event) =>{
   console.log(event);
 });
+
+const submitButton  = document.querySelector('.submit-button');
+submitButton.addEventListener('click', () => {
+  numberArray.push(numberInput.value);
+  localStorage.setItem('cart3', JSON.stringify(numberArray));
+});
+
+const retrieveButton = document.querySelector('.retrieve-button');
+const displayResults = document.querySelector('.display-results');
+retrieveButton.addEventListener('click', () => {
+  numberArray = JSON.parse(localStorage.getItem('cart3'));
+  displayResults.innerHTML = `Storage Array: ${numberArray}`;
+});
+
+const clearStorageButton = document.querySelector('.clear-storage');
+clearStorageButton.addEventListener('click', () =>{
+  localStorage.setItem('cart3', JSON.stringify([]));
+  numberArray = JSON.parse(localStorage.getItem('cart3'));
+  displayResults.innerHTML = `Storage Array: ${numberArray}`;
+  console.log(numberArray);
+})

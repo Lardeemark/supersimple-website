@@ -3,8 +3,23 @@
   <head>
     <title>Trial and Error</title>
   </head>
-  <body>
+  <body style="font-family: arial;">
+    <div style="display:flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: space-between;
+    height: 150px;
+    ">
     <input type="number" placeholder="Type a number" class="number-input" min="0" max="100">
+    <button class="submit-button">submit</button>
+    <button class="retrieve-button">retrieve</button>
+    
+    <div class="display-results">
+      Displayed results: 
+    </div>
+    <button class="clear-storage">Clear Storage</button>
+    </div> 
+
 
     <script src="scripts/trial.js"></script>
   </body>

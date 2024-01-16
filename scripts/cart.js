@@ -3,6 +3,7 @@ import {products} from './products.js';
 export let cart = [];
 
 export function initializeCart(initializer){
+  cart = [];
   const initializeFromStorage = initializer;
 
   if (initializeFromStorage === false){
