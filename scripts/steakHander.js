@@ -29,7 +29,7 @@ function populateSteakCollection(){
           </p>
         </div>
         <div class="steak-order">
-          <div style="display:flex; align-items: center; justify-content:space-between;">
+          <div style="display:flex; align-items: center;">
             <input type="number" placeholder="Enter quantity by lbs" class="input-cartItem input-cartItem-${index}-js"
             min="0" max="100" > lbs
           </div>
@@ -55,11 +55,8 @@ function populateSteakCollection(){
 
 function simpleInputDetector(value, index){
   const numberInput = document.querySelector(`.input-cartItem-${index}-js`);
-  console.log(numberInput);
   numberInput.addEventListener('keydown', (keyValue) =>{
-    console.log(keyValue);
   });
-  console.log('event listener added');
 }
 
 
@@ -68,7 +65,7 @@ function addInputListener(value, index){
   const inputElement2 = document.querySelector(`.input-cartItem-${index}-js`);
 
   inputElement2.addEventListener('keydown', (keyValue) => {
-    console.log(keyValue);
+
     if(keyValue.key === 'Enter'){
       const orderQuantity = parseInt(inputElement2.value);
       if(0< orderQuantity && orderQuantity < 100){
@@ -80,9 +77,6 @@ function addInputListener(value, index){
         inputElement2.value = 100;
         document.querySelector(`.subtotal-steak-${index}-js`).innerHTML = `Subtotal: $${(100*(value.price/100)).toFixed(2)}`;
       }
-      console.log('value: ' + value);
-      console.log(typeof orderQuantity);
-      console.log('order quantity: ' + orderQuantity);
     }
   });
   return inputElement2;
@@ -92,11 +86,9 @@ function addToCartButtonListener(value,index, inputElement2){
 
   
   const inputElement3 = document.querySelector(`.steak-order-button-${index}-js`);
-  console.log('inputElement 3: ');
-  console.log(inputElement3);
+
   inputElement3.addEventListener('click', () => {
-    console.log('click');
-    console.log(inputElement2);
+
     let duplicateChecker = false;
     const inputInt = parseInt(inputElement2.value);
     if(inputInt >0 && inputInt<100){

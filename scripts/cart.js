@@ -24,7 +24,7 @@ export function initializeCart(initializer){
   else{console.log('please enter a boolean value');
   }
   console.log('cart: ');
-  console.log(cart);
+  console.log(cart.length);
 }
 
 export function saveToStorage(){
@@ -55,6 +55,5 @@ export function getPicture(productName){
   };
 
 export function getCartLength(){
-  console.log(cart);
   return cart.length;
 }
