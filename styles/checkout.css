@@ -1,0 +1,61 @@
+
+
+.cart-list-grid{
+  display: flex;
+  flex-direction: column;
+}
+
+.product{
+  margin: 10px 0px;
+  border: 2px solid black;
+  display: flex;
+  height: 180px;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.product-checkout-info{
+  flex: 1;
+}
+
+.checkout-total{
+  margin: 10px 0px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;;
+  height: 100px;
+  background-color: white;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+
+}
+
+.delete-button-box{
+  width: 200px;
+  text-align: center;
+  flex: 1;
+}
+
+.delete-button{
+  font-size: 15px;
+}
+
+.order-button-box{
+  width: 200px;
+  text-align: center;
+  flex: 1;
+}
+
+.order-button{
+  font-size: 15px;
+}
+
+.steak-image{
+  flex: 1;
+  height: 100%;
+  object-fit: cover;
+  display:inline-block;
+  object-position: 0% 90%;
+  
+}
