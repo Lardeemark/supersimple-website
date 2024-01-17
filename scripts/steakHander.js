@@ -1,57 +1,62 @@
 import {cart, initializeCart, saveToStorage, getCartLength} from './cart.js';
-import {products} from './products.js';
+import {products, productArrayInitializer, productNameArray} from './products.js';
+import {initializeListeners} from './searchBar.js';
 
 //code for calculating subtotal and restricting quantity input
+initializeListeners();
 initializeCart(true);
-populateSteakCollection();
+productArrayInitializer();
+populateSteakCollection(productNameArray);
 document.querySelector('.cart-quantity-js').innerHTML = getCartLength();
 
-function populateSteakCollection(){
+export function populateSteakCollection(productNameArray){
   const inputElement = document.querySelector('.steak-collection-container');
   inputElement.innerHTML = '';
 
   products.forEach((value, index) => {
-    inputElement.innerHTML += `
-    <div class="steak-collection steak-collection-${index}">
-      <div class="steak-image steak-image-${index}">
-        <img src=${value.img}
-        style="width: 100%;
-        height: 100%;
-        display: inline-block;
-        object-fit: cover;
-        object-position: 0% 90%;" >
-      </div>
-      <div class="steak-information">
-        <div class="steak-information-text">
-          <p>USDA ${value.name}
-          </p>
-          <p>Price: $${Math.round(value.price/100).toFixed(2)} per pound
-          </p>
-        </div>
-        <div class="steak-order">
-          <div style="display:flex; align-items: center;">
-            <input type="number" placeholder="Enter quantity by lbs" class="input-cartItem input-cartItem-${index}-js"
-            min="0" max="100" > lbs
-          </div>
-          <p style="margin: 0;" class="subtotal-steak1 subtotal-steak-${index}-js ">Subtotal: </p>
-          <button class="steak-order-button steak-order-button-${index}-js">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-    `;
+    console.log(value.name);
+    console.log(productNameArray[index]);
+    if(value.name === productNameArray[index]){
 
-  
-  
-    simpleInputDetector(value,index);
+      inputElement.innerHTML += `
+      <div class="steak-collection steak-collection-${index}">
+        <div class="steak-image steak-image-${index}">
+          <img src=${value.img}
+          style="width: 100%;
+          height: 100%;
+          display: inline-block;
+          object-fit: cover;
+          object-position: 0% 90%;" >
+        </div>
+        <div class="steak-information">
+          <div class="steak-information-text">
+            <p>USDA ${value.name}
+            </p>
+            <p>Price: $${Math.round(value.price/100).toFixed(2)} per pound
+            </p>
+          </div>
+          <div class="steak-order">
+            <div style="display:flex; align-items: center;">
+              <input type="number" placeholder="Enter quantity by lbs" class="input-cartItem input-cartItem-${index}-js"
+              min="0" max="100" > lbs
+            </div>
+            <p style="margin: 0;" class="subtotal-steak1 subtotal-steak-${index}-js ">Subtotal: </p>
+            <button class="steak-order-button steak-order-button-${index}-js">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      `;
+    }
   });
 
   products.forEach((value,index)=>{
+    if(productNameArray[index] === value.name){
     const inputElement2 = addInputListener(value,index);
     addToCartButtonListener(value,index, inputElement2);
-  })
+    }
+  });
   
 }
-
 
 function simpleInputDetector(value, index){
   const numberInput = document.querySelector(`.input-cartItem-${index}-js`);
@@ -110,4 +115,3 @@ function addToCartButtonListener(value,index, inputElement2){
     document.querySelector('.cart-quantity-js').innerHTML = getCartLength();
   });
 }
-

@@ -49,3 +49,9 @@ clearStorageButton.addEventListener('click', () =>{
   displayResults.innerHTML = `Storage Array: ${numberArray}`;
   console.log(numberArray);
 })
+
+
+let arrayToTest = [];
+arrayToTest[3] = 5;
+console.log(arrayToTest);
+console.log(arrayTotest[1]);
